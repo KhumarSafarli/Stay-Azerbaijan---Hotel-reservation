@@ -1,0 +1,15 @@
+@mixin center-items {
+  display: flex;
+  align-items: center;
+}
+@mixin for-size($screen) {
+  @if $screen ==tablet {
+    @media screen and (max-width: 1050px) {
+      @content;
+    }
+  } @else if $screen ==mobile {
+    @media screen and (max-width: 690px) {
+      @content;
+    }
+  }
+}
