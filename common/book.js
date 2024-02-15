@@ -27,4 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
   flatpickr(checkOutInput, {
     dateFormat: "Y-m-d",
   });
+
+  function toggleDropdown() {
+    const dropdownContent = document.querySelector(".pax-dropdown-content");
+    dropdownContent.style.display =
+      dropdownContent.style.display === "block" ? "none" : "block";
+  }
+
+  // Populate options for number of adults, children, and rooms
+  const guestsSelect = document.getElementById("guests");
+  const childrenSelect = document.getElementById("children");
+  const roomsSelect = document.getElementById("rooms");
+
+  for (let i = 0; i <= 9; i++) {
+    guestsSelect.options.add(new Option(i, i));
+    childrenSelect.options.add(new Option(i, i));
+    roomsSelect.options.add(new Option(i, i));
+  }
 });

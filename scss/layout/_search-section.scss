@@ -52,10 +52,11 @@
         color: white;
         text-align: center;
         font-size: 70px;
-
+        animation: slideIn 1s ease-in-out;
+        @include slide-in-animation;
         @include for-size(tablet) {
           font-size: 40px;
-          padding: 20px 0px;
+          padding: 10px 0px;
         }
         @include for-size(mobile) {
           font-size: 20px;
@@ -90,16 +91,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    form {
+      gap: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include for-size(tablet) {
+        gap: 10px;
+      }
+    }
 
     .booking-container {
-      width: 1400px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      width: 1200px;
       height: 127.909px;
       background-color: rgba(255, 255, 255, 0.566);
       border: 2px solid orange;
       border-radius: 23px;
       display: flex;
       align-items: center;
-      padding: 0px 30px;
+      padding: 0px 10px;
       gap: 10px;
       @include for-size(tablet) {
         width: 600px;
@@ -113,8 +125,8 @@
         padding: 10px;
         flex-direction: column;
       }
-      .pax,
-      .rooms {
+
+      .pax {
         select {
           width: 50px;
           option {
@@ -127,9 +139,7 @@
       .city,
       .check-out,
       .check-in,
-      .pax,
-      .rooms,
-      .search-btn {
+      .pax {
         @include center-items;
         gap: 10px;
         background-color: white;
@@ -154,31 +164,6 @@
         }
         img {
           width: 15px;
-        }
-      }
-
-      .search-btn {
-        background-color: orange;
-        border-color: orange;
-        cursor: pointer;
-        width: 200px;
-        height: 50px;
-        justify-content: center;
-        @include for-size(tablet) {
-          width: 300px;
-        }
-        @include center-items;
-        &:hover {
-          transform: scale(1.1);
-        }
-        button {
-          border: none;
-          background-color: orange;
-          @include center-items;
-          cursor: pointer;
-          img {
-            width: 20px;
-          }
         }
       }
     }
