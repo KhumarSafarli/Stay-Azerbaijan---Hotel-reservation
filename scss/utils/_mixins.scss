@@ -4,7 +4,7 @@
 }
 @mixin for-size($screen) {
   @if $screen ==tablet {
-    @media screen and (max-width: 1050px) {
+    @media screen and (max-width: 1300px) {
       @content;
     }
   } @else if $screen ==mobile {

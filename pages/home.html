@@ -5,48 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../scss/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script defer src="../common/book.js"></script>
     <title>Stay Azerbaijan</title>
   </head>
-  <header>
-    <div class="navbar-container">
-      <div class="navbar">
-        <div class="left-side">
-          <a href="./home.html"
-            ><img src="../assets/icons/logo2.png" />
-            <div class="line"></div>
-          </a>
-          <a href="#" class="logo-text">Stay <br />Azerbaijan</a>
-        </div>
-        <div class="right-side">
-          <div class="nav-items">
-            <a href="#" class="about">Haqqımızda</a>
-            <div class="currency">
-              <a href="#" class="currency"
-                >AZN <img src="../assets/icons/down.svg"
-              /></a>
-            </div>
+  <body>
+    <header>
+      <div class="navbar-container">
+        <div class="navbar">
+          <div class="left-side">
+            <a href="./home.html"
+              ><img src="../assets/icons/logo2.png" />
+              <div class="line"></div>
+            </a>
+            <a href="#" class="logo-text">Stay <br />Azerbaijan</a>
+          </div>
+          <div class="right-side">
+            <div class="nav-items">
+              <a href="#" class="contact">Əlaqə</a>
+              <a href="#" class="about">Haqqımızda</a>
+              <div class="currency">
+                <a href="#" class="currency"
+                  >AZN <img src="../assets/icons/down.svg"
+                /></a>
+              </div>
 
-            <div class="daxil-ol">
-              <img src="../assets/icons/login.svg" />
-              <a href="#" class="login"> Daxil ol</a>
+              <div class="daxil-ol">
+                <img src="../assets/icons/login.svg" />
+                <a href="#" class="login"> Daxil ol</a>
+              </div>
             </div>
-          </div>
-          <div class="burger-menu">
-            <img src="../assets/icons/burger.svg" />
+            <div class="burger-menu">
+              <img src="../assets/icons/burger.svg" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <div class="sub-bar-container">
-    <div class="sub-bar">
-      <div class="hotels">
-        <a href="#">Otellər</a>
+    </header>
+    <div class="sub-bar-container">
+      <div class="sub-bar">
+        <div class="hotels">
+          <img src="../assets/icons/hotel.svg" />
+          <a href="#">Otellər</a>
+        </div>
+        <div class="line-between"></div>
+        <div class="transfers">
+          <a href="#">Transfer xidmətləri</a>
+          <img src="../assets/icons/car.svg" />
+        </div>
       </div>
-      <div class="line-between"></div>
-      <div class="transfers">
-        <a href="#">Transfer xidmətləri</a>
-      </div>
     </div>
-  </div>
+    <div class="search-section">
+      <div class="background-part">
+        <div class="rectangle">
+          <img src="../assets/images/rectangle.png" />
+        </div>
+        <div class="header">
+          <h1>
+            Azərbaycanda ilk <br />
+            <span class="small-text">otel rezervasiya platforması</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="booking-box">
+        <form>
+
+      
+        <div class="booking-container">
+          <div class="city">
+            <img src="../assets/icons/location.svg"/>
+            <label for="city">İstiqamət:</label>
+            <input type="text" class="location" id="city" name="city" placeholder="Şəhər/Otel adı" />
+          </div>
+          <div class="check-in">
+            <img src="../assets/icons/calendar.svg"/>
+            <label for="check-in">Giriş:</label>
+            <input type="date" id="check-in" name="check-in" class="custom-calendar" />
+          </div>
+          
+          <div class="check-out">
+             <img src="../assets/icons/calendar.svg"/>
+            <label for="check-out">Çıxış:</label>
+            <input type="date" id="check-out" name="check-out" />
+          </div>
+          <div class="pax">
+            <label for="guests">Böyük:</label>
+            <select id="guests" name="guests">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+          <div class="pax">
+            <label for="children">Uşaq:</label>
+            <select id="guests" name="guests">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+          </div>
+          <div class="rooms">
+            <label for="rooms">Otaq:</label>
+            <select id="guests" name="guests">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+          </div>
+
+          <div class="search-btn">
+            <button type="submit"><img src="../assets/icons/search.svg"></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+    
+  </body>
 </html>
