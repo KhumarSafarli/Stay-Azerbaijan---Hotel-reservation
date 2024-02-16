@@ -55,6 +55,23 @@ header {
             img {
               width: 20px;
             }
+            select {
+              border: none;
+              outline: none;
+              color: white;
+              cursor: pointer;
+              transition: 0.3s;
+              background-color: transparent;
+              &:hover {
+                color: orange;
+              }
+              option {
+                border: none;
+                outline: none;
+                cursor: pointer;
+                color: #012367;
+              }
+            }
           }
           .daxil-ol {
             @include center-items;
