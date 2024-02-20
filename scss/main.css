@@ -838,3 +838,106 @@ header .navbar-container .navbar .right-side .burger-menu {
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+
+.review-section {
+  width: 100%;
+  position: relative;
+}
+.review-section .travel {
+  position: absolute;
+  bottom: 0px;
+}
+@media screen and (max-width: 1200px) {
+  .review-section .travel {
+    display: none;
+  }
+}
+@media screen and (max-width: 690px) {
+  .review-section {
+    min-width: 375px;
+  }
+}
+.review-section .review-container {
+  height: 600px;
+  background-color: rgb(237, 236, 236);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.review-section .review-container .header {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.review-section .review-container .header img {
+  width: 40px;
+}
+.review-section .review-container .header h5 {
+  color: #df6951;
+  font-size: 18px;
+  font-weight: 700;
+}
+.review-section .review-container .header h1 {
+  color: #181e4b;
+}
+@media screen and (max-width: 690px) {
+  .review-section .review-container .header h1 {
+    font-size: 20px;
+  }
+}
+.review-section .review-container .comment {
+  position: relative;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 10px;
+  width: 558px;
+  height: 279px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 17px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.review-section .review-container .comment:hover {
+  transform: scale(1.1);
+}
+.review-section .review-container .comment img {
+  position: absolute;
+  top: -50px;
+}
+@media screen and (max-width: 690px) {
+  .review-section .review-container .comment .profile {
+    width: 100px;
+  }
+}
+.review-section .review-container .comment .review-comment {
+  margin-top: 60px;
+}
+@media screen and (max-width: 690px) {
+  .review-section .review-container .comment .review-comment {
+    margin-top: 10px;
+  }
+}
+.review-section .review-container .comment .dirnag {
+  position: absolute;
+  left: 0px;
+  width: 100px;
+}
+@media screen and (max-width: 690px) {
+  .review-section .review-container .comment .dirnag {
+    width: 50px;
+    transform: translateY(30px);
+  }
+}
+@media screen and (max-width: 690px) {
+  .review-section .review-container .comment {
+    width: 200px;
+    height: 100%;
+  }
+}
