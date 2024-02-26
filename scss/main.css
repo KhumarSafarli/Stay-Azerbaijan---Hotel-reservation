@@ -962,6 +962,7 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
 }
 
 .footer {
+  border-top: 1px solid rgba(128, 128, 128, 0.543);
   position: relative;
   display: flex;
   align-items: center;
@@ -1344,22 +1345,19 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
 .form-group {
   margin-bottom: 20px;
 }
-
-label {
+.form-group label {
   display: block;
   margin-bottom: 5px;
 }
-
-input[type=text],
-input[type=email] {
+.form-group input[type=text],
+.form-group input[type=email] {
   width: 300px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
 }
-
-textarea {
+.form-group textarea {
   width: 300px;
   outline: none;
   height: 120px;
@@ -1368,8 +1366,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-button[type=submit] {
+.form-group button[type=submit] {
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -1378,7 +1375,72 @@ button[type=submit] {
   cursor: pointer;
   width: 300px;
 }
-
-button[type=submit]:hover {
+.form-group button[type=submit]:hover {
   background-color: #0056b3;
+}
+
+.login-section {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+}
+@media screen and (max-width: 690px) {
+  .login-section {
+    min-width: 375px;
+  }
+}
+.login-section .left {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.login-section .left img {
+  width: 15px;
+}
+.login-section .left form {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login-section .left form .name,
+.login-section .left form .password {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.login-section .left form input {
+  width: 200px;
+  border: 1px solid rgba(48, 48, 181, 0.699);
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+}
+.login-section .left form a {
+  font-size: 14px;
+}
+.login-section .left form .submit {
+  width: 200px;
+  color: white;
+  cursor: pointer;
+  margin-left: 25px;
+  transition: 0.3s;
+  background-color: rgba(48, 48, 181, 0.699);
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+}
+.login-section .left form .submit:hover {
+  transform: scale(1.1);
+}
+.login-section .left .header h1 {
+  font-size: 50px;
+  margin-top: 30px;
+  color: rgb(23, 12, 48);
+}
+.login-section .right img {
+  width: 600px;
 }
