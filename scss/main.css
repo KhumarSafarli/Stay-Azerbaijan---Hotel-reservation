@@ -1089,6 +1089,43 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   transform: translateX(190px);
 }
 
+.background {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  min-width: 375px;
+}
+.background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.background .logo-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+.background .logo-text img {
+  width: 160px;
+  height: auto;
+}
+.background .logo-text h1,
+.background .logo-text h4 {
+  color: white;
+}
+.background .logo-text h1 {
+  font-size: 48px;
+}
+
 .about-section {
   width: 100%;
 }
@@ -1184,7 +1221,7 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   background-color: white;
   justify-content: center;
   border-radius: 17px;
-  margin-top: 60px;
+  margin-top: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .review-section .review-container .review:hover {
@@ -1221,4 +1258,127 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
 }
 .review-section .review-container .review .text h3 {
   font-size: 12px;
+}
+
+.contact-us {
+  width: 100%;
+}
+@media screen and (max-width: 690px) {
+  .contact-us {
+    min-width: 375px;
+  }
+}
+.contact-us .contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 30px;
+  gap: 130px;
+}
+@media screen and (max-width: 1200px) {
+  .contact-us .contact-container {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .contact-us .contact-container {
+    flex-direction: column;
+  }
+}
+.contact-us .contact-container .left h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: rgb(211, 138, 1);
+}
+.contact-us .contact-container .right {
+  position: relative;
+  overflow: hidden;
+}
+.contact-us .contact-container .right p {
+  font-size: 19px;
+}
+.contact-us .contact-container .right .call {
+  width: 13px;
+}
+@media screen and (max-width: 690px) {
+  .contact-us .contact-container .right {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    padding: 0px 40px;
+  }
+}
+.contact-us .contact-container .right .callcentre {
+  width: 300px;
+  -webkit-animation: bounce 0.5s infinite alternate;
+          animation: bounce 0.5s infinite alternate;
+}
+@media screen and (max-width: 1200px) {
+  .contact-us .contact-container .right .callcentre {
+    width: 200px;
+  }
+}
+.contact-us .contact-container .right h3 {
+  color: orange;
+}
+.contact-us .contact-container .right h2 {
+  font-size: 40px;
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type=text],
+input[type=email] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+textarea {
+  width: 300px;
+  outline: none;
+  height: 120px;
+  padding: 10px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type=submit] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 300px;
+}
+
+button[type=submit]:hover {
+  background-color: #0056b3;
 }
