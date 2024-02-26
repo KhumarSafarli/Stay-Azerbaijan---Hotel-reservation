@@ -34,10 +34,10 @@
           transform: translateY(-10px);
           width: 60px;
         }
-        .slogan {
-          @include for-size(mobile) {
-            display: none;
-          }
+      }
+      .slogan {
+        @include for-size(mobile) {
+          display: none;
         }
       }
       .social-media-icons {
