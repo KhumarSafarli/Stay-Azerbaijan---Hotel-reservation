@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -256,7 +257,7 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   position: relative;
   width: 100%;
   height: 500px;
-  background-image: url("../assets/images/bg4.png");
+  background-image: url("../assets/images/hotel-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1379,7 +1380,8 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   background-color: #0056b3;
 }
 
-.login-section {
+.login-section,
+.register-section {
   width: 100%;
   padding: 50px;
   display: flex;
@@ -1387,45 +1389,91 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   justify-content: center;
 }
 @media screen and (max-width: 690px) {
-  .login-section {
+  .login-section,
+.register-section {
     min-width: 375px;
+    flex-direction: column;
   }
 }
-.login-section .left {
+.login-section .left,
+.register-section .left {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
-.login-section .left img {
+.login-section .left img,
+.register-section .left img {
   width: 15px;
 }
-.login-section .left form {
+.login-section .left form,
+.register-section .left form {
   width: 250px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+.login-section .left form .password-validation-box,
+.register-section .left form .password-validation-box {
+  width: 364px;
+  background-color: #fff;
+  box-shadow: 0px 5px 9px rgba(61, 61, 61, 0.1);
+  border: 1px solid rgba(74, 113, 255, 0.6823529412);
+  border-radius: 4px;
+  padding: 10px;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+.login-section .left form .password-validation-box h5,
+.register-section .left form .password-validation-box h5 {
+  margin-bottom: 5px;
+}
+.login-section .left form .password-validation-box .valid,
+.register-section .left form .password-validation-box .valid {
+  color: green;
+}
+.login-section .left form .password-validation-box .valid:before,
+.register-section .left form .password-validation-box .valid:before {
+  position: relative;
+  content: "✓";
+  margin-right: 5px;
+}
+.login-section .left form .password-validation-box .invalid,
+.register-section .left form .password-validation-box .invalid {
+  color: red;
+}
+.login-section .left form .password-validation-box .invalid:before,
+.register-section .left form .password-validation-box .invalid:before {
+  position: relative;
+  margin-right: 5px;
+  content: "✗";
+}
 .login-section .left form .name,
-.login-section .left form .password {
+.login-section .left form .password,
+.register-section .left form .name,
+.register-section .left form .password {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.login-section .left form input {
+.login-section .left form input,
+.register-section .left form input {
   width: 200px;
   border: 1px solid rgba(48, 48, 181, 0.699);
   padding: 5px;
   outline: none;
   border-radius: 5px;
 }
-.login-section .left form a {
+.login-section .left form a,
+.register-section .left form a {
   font-size: 14px;
 }
-.login-section .left form .submit {
+.login-section .left form .submit,
+.register-section .left form .submit {
   width: 200px;
   color: white;
   cursor: pointer;
-  margin-left: 25px;
   transition: 0.3s;
   background-color: rgba(48, 48, 181, 0.699);
   height: 30px;
@@ -1433,14 +1481,232 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   border-radius: 5px;
   outline: none;
 }
-.login-section .left form .submit:hover {
+.login-section .left form .submit:hover,
+.register-section .left form .submit:hover {
   transform: scale(1.1);
 }
-.login-section .left .header h1 {
+.login-section .left .header h1,
+.register-section .left .header h1 {
   font-size: 50px;
   margin-top: 30px;
   color: rgb(23, 12, 48);
 }
-.login-section .right img {
+.login-section .right img,
+.register-section .right img {
   width: 600px;
+}
+@media screen and (max-width: 1200px) {
+  .login-section .right img,
+.register-section .right img {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .login-section .right img,
+.register-section .right img {
+    width: 100%;
+  }
+}
+
+.transport-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("../assets/images/car-wall.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px 40px;
+  justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  .transport-section {
+    align-self: stretch;
+  }
+}
+@media screen and (max-width: 690px) {
+  .transport-section {
+    min-width: 375px;
+    padding: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.transport-section .text-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(0, 0, 75);
+  gap: 8px;
+}
+@media screen and (max-width: 1200px) {
+  .transport-section .text-header {
+    padding: 20px 20px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .transport-section .text-header {
+    padding: 40px 40px;
+  }
+}
+.transport-section .text-header h5 {
+  font-size: 30px;
+  -webkit-animation: slideIn 1s ease forwards;
+          animation: slideIn 1s ease forwards;
+}
+@media screen and (max-width: 690px) {
+  .transport-section .text-header h5 {
+    font-size: 20px;
+  }
+}
+.transport-section .text-header h1 {
+  font-size: 49px;
+  -webkit-animation: slideFromRight 1s ease forwards;
+          animation: slideFromRight 1s ease forwards;
+}
+@media screen and (max-width: 690px) {
+  .transport-section .text-header h1 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .transport-section .text-header p {
+    font-size: 10px;
+  }
+}
+
+.prices-section {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.prices-section .price-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prices-section .price-header h3 {
+  font-size: 32px;
+  color: orange;
+  font-weight: 400;
+}
+.prices-section .cars-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.prices-section .cars-section .top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.prices-section .cars-section .top .line {
+  width: 0px;
+  height: 1px;
+  background-color: orange;
+  visibility: hidden;
+  transition: width 0.4s ease-in-out;
+}
+.prices-section .cars-section .car-img {
+  width: 200px;
+  height: 100px;
+  margin-left: 30px;
+}
+.prices-section .cars-section .standart-car,
+.prices-section .cars-section .business-car,
+.prices-section .cars-section .viano-car,
+.prices-section .cars-section .bus-car {
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 310px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.171);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.prices-section .cars-section .standart-car .price-icon,
+.prices-section .cars-section .business-car .price-icon,
+.prices-section .cars-section .viano-car .price-icon,
+.prices-section .cars-section .bus-car .price-icon {
+  width: 20px;
+}
+.prices-section .cars-section .standart-car:hover,
+.prices-section .cars-section .business-car:hover,
+.prices-section .cars-section .viano-car:hover,
+.prices-section .cars-section .bus-car:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.prices-section .cars-section .standart-car .people-count,
+.prices-section .cars-section .standart-car .car-price,
+.prices-section .cars-section .business-car .people-count,
+.prices-section .cars-section .business-car .car-price,
+.prices-section .cars-section .viano-car .people-count,
+.prices-section .cars-section .viano-car .car-price,
+.prices-section .cars-section .bus-car .people-count,
+.prices-section .cars-section .bus-car .car-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prices-section .cars-section .standart-car .people-count .people,
+.prices-section .cars-section .standart-car .car-price .people,
+.prices-section .cars-section .business-car .people-count .people,
+.prices-section .cars-section .business-car .car-price .people,
+.prices-section .cars-section .viano-car .people-count .people,
+.prices-section .cars-section .viano-car .car-price .people,
+.prices-section .cars-section .bus-car .people-count .people,
+.prices-section .cars-section .bus-car .car-price .people {
+  width: 15px;
+}
+.prices-section .cars-section .standart-car .name,
+.prices-section .cars-section .business-car .name,
+.prices-section .cars-section .viano-car .name,
+.prices-section .cars-section .bus-car .name {
+  font-weight: 600;
+}
+.prices-section .cars-section .standart-car:hover .top .line,
+.prices-section .cars-section .business-car:hover .top .line,
+.prices-section .cars-section .viano-car:hover .top .line,
+.prices-section .cars-section .bus-car:hover .top .line {
+  visibility: visible;
+  width: 100px;
 }
