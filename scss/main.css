@@ -27,6 +27,16 @@ body a {
   font-weight: 700;
 }
 @font-face {
+  font-family: "Kaisei";
+  src: url("../../fonts/KaiseiHarunoUmi-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("../../fonts/Cinzel-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
   font-family: "Poppins";
   src: url("../../fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -1613,6 +1623,11 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   justify-content: center;
   gap: 30px;
 }
+@media screen and (max-width: 690px) {
+  .prices-section {
+    min-width: 375px;
+  }
+}
 .prices-section .price-header {
   display: flex;
   align-items: center;
@@ -1628,6 +1643,11 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .prices-section .cars-section {
+    flex-direction: column;
+  }
 }
 .prices-section .cars-section .top {
   display: flex;
@@ -1663,9 +1683,13 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   cursor: pointer;
 }
 .prices-section .cars-section .standart-car .price-icon,
+.prices-section .cars-section .standart-car .model,
 .prices-section .cars-section .business-car .price-icon,
+.prices-section .cars-section .business-car .model,
 .prices-section .cars-section .viano-car .price-icon,
-.prices-section .cars-section .bus-car .price-icon {
+.prices-section .cars-section .viano-car .model,
+.prices-section .cars-section .bus-car .price-icon,
+.prices-section .cars-section .bus-car .model {
   width: 20px;
 }
 .prices-section .cars-section .standart-car:hover,
@@ -1677,24 +1701,32 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
 }
 .prices-section .cars-section .standart-car .people-count,
 .prices-section .cars-section .standart-car .car-price,
+.prices-section .cars-section .standart-car .car-model,
 .prices-section .cars-section .business-car .people-count,
 .prices-section .cars-section .business-car .car-price,
+.prices-section .cars-section .business-car .car-model,
 .prices-section .cars-section .viano-car .people-count,
 .prices-section .cars-section .viano-car .car-price,
+.prices-section .cars-section .viano-car .car-model,
 .prices-section .cars-section .bus-car .people-count,
-.prices-section .cars-section .bus-car .car-price {
+.prices-section .cars-section .bus-car .car-price,
+.prices-section .cars-section .bus-car .car-model {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 .prices-section .cars-section .standart-car .people-count .people,
 .prices-section .cars-section .standart-car .car-price .people,
+.prices-section .cars-section .standart-car .car-model .people,
 .prices-section .cars-section .business-car .people-count .people,
 .prices-section .cars-section .business-car .car-price .people,
+.prices-section .cars-section .business-car .car-model .people,
 .prices-section .cars-section .viano-car .people-count .people,
 .prices-section .cars-section .viano-car .car-price .people,
+.prices-section .cars-section .viano-car .car-model .people,
 .prices-section .cars-section .bus-car .people-count .people,
-.prices-section .cars-section .bus-car .car-price .people {
+.prices-section .cars-section .bus-car .car-price .people,
+.prices-section .cars-section .bus-car .car-model .people {
   width: 15px;
 }
 .prices-section .cars-section .standart-car .name,
@@ -1709,4 +1741,156 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
 .prices-section .cars-section .bus-car:hover .top .line {
   visibility: visible;
   width: 100px;
+}
+
+.hotels-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("../assets/images/hotel-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 40px;
+  justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  .hotels-section {
+    align-self: stretch;
+  }
+}
+@media screen and (max-width: 690px) {
+  .hotels-section {
+    min-width: 375px;
+    padding: 0;
+  }
+}
+.hotels-section .header-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.hotels-section .header-text h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 70px;
+}
+@media screen and (max-width: 1200px) {
+  .hotels-section .header-text {
+    padding: 20px 20px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .hotels-section .header-text {
+    padding: 40px 40px;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+.hotels-list {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 690px) {
+  .hotels-list {
+    min-width: 375px;
+  }
+}
+.hotels-list .list-container {
+  width: 1000px;
+  padding: 0px 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  gap: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .hotels-list .list-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+@media screen and (max-width: 690px) {
+  .hotels-list .list-container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+}
+
+.hotel-example-card {
+  width: 300px;
+  height: 450px;
+  position: relative;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.hotel-example-card .hotel-name {
+  color: rgb(143, 76, 0);
+  font-size: 20px;
+}
+.hotel-example-card .hotel-name:hover {
+  color: rgb(231, 138, 31);
+}
+.hotel-example-card:hover {
+  transform: scale(1.1);
+}
+.hotel-example-card .line {
+  margin-top: 30px;
+  width: 0px;
+  height: 1px;
+  background-color: orange;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  transition: width 0.4s ease-in-out, visibility 0.4s ease-in-out; /* Modified */
+}
+.hotel-example-card:hover .line {
+  visibility: visible;
+  width: 200px;
+}
+.hotel-example-card .info-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+}
+.hotel-example-card .info-part .hotel-location img {
+  width: 10px;
+}
+.hotel-example-card .hotel-img {
+  width: 250px;
+  height: 450px;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+}
+
+.show-more {
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  color: rgba(13, 0, 128, 0.84);
+  border-radius: 10px;
+  transition: 0.2s;
+  border: 2px solid rgba(124, 110, 255, 0.84);
+}
+.show-more:hover {
+  border: 2px solid orange;
 }
