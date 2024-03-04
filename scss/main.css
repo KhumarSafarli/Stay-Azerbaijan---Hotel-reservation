@@ -1361,7 +1361,8 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   margin-bottom: 5px;
 }
 .form-group input[type=text],
-.form-group input[type=email] {
+.form-group input[type=email],
+.form-group input[type=tel] {
   width: 300px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -2104,4 +2105,198 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
 .room-example .bed-type img {
   width: 15px;
   margin-right: 5px;
+}
+
+.reservation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding: 20px 10px;
+}
+@media screen and (max-width: 690px) {
+  .reservation {
+    min-width: 375px;
+  }
+}
+.reservation h4 {
+  font-size: 36px;
+  font-weight: 400;
+}
+.reservation .reserve-box {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.reservation .reserve-box .hotel-map iframe {
+  margin-top: 30px;
+  width: 100%;
+  height: 200px;
+}
+.reservation .reserve-box .top {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.reservation .reserve-box .top .room-img {
+  position: relative;
+  cursor: zoom-in;
+}
+@media screen and (max-width: 1200px) {
+  .reservation .reserve-box .top {
+    flex-direction: column;
+  }
+}
+.reservation .reserve-box .top .zoom-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 50px;
+}
+.reservation .reserve-box .top .room-img:hover .zoom-icon {
+  opacity: 0.5;
+}
+.reservation .reserve-box .top .zoomed {
+  transform: scale(2);
+  transition: transform 0.3s ease;
+  cursor: zoom-out;
+}
+.reservation .reserve-box .top p {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.reservation .reserve-box .top img {
+  width: 13px;
+  margin-right: 7px;
+}
+.reservation .reserve-box .top #hotel-img {
+  width: 400px;
+}
+.reservation .reserve-box .bottom {
+  padding: 0px 20px;
+  min-width: 375px;
+}
+.reservation .reserve-box h5 {
+  font-size: 16px;
+  font-weight: 500;
+  width: 400px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 106);
+}
+.reservation .reserve-box .form-container {
+  display: flex;
+  flex-direction: column;
+}
+.reservation .reserve-box .form-container #transfer-option {
+  border: 1px solid orange;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.reservation .reserve-box .form-container .qeyd {
+  color: red;
+  font-size: 12px;
+}
+
+.results {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(57, 130, 227);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 40px;
+  justify-content: center;
+}
+.results img {
+  width: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .results {
+    align-self: stretch;
+  }
+}
+@media screen and (max-width: 690px) {
+  .results {
+    min-width: 375px;
+    padding: 0;
+  }
+}
+.results .header-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.results .header-text h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1200px) {
+  .results .header-text {
+    padding: 20px 20px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .results .header-text {
+    padding: 40px 40px;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+.main-results {
+  display: flex;
+  padding: 20px 100px;
+}
+
+.qiymet,
+.category-box,
+.meal-type {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.183);
+  padding: 13px;
+  border-radius: 10px;
+}
+
+.range-container {
+  display: flex;
+  width: 340px;
+}
+.range-container input[type=range] {
+  width: 50%;
+  margin-right: -5px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.submit-search {
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: rgb(57, 130, 227);
+  color: white;
+  transition: 0.2s;
+}
+.submit-search:hover {
+  background-color: rgb(130, 184, 255);
 }
