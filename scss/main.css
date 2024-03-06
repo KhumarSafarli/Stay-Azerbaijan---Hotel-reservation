@@ -387,14 +387,14 @@ header .navbar-container .navbar .right-side .burger-menu .nav-links .show-nav-l
   align-items: center;
   justify-content: center;
 }
-.search-section .booking-box form {
+.search-section .booking-box .form {
   gap: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (max-width: 1200px) {
-  .search-section .booking-box form {
+  .search-section .booking-box .form {
     gap: 10px;
   }
 }
