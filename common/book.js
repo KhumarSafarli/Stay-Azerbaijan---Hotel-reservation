@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdownContent.style.display === "block" ? "none" : "block";
   }
 
-  // Populate options for number of adults, children, and rooms
   const guestsSelect = document.getElementById("guests");
   const childrenSelect = document.getElementById("children");
   const roomsSelect = document.getElementById("rooms");
