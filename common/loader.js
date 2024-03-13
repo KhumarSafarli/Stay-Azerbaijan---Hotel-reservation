@@ -5,21 +5,3 @@ window.addEventListener("load", function () {
     loader.classList.add("hide-preloader");
   }, delay);
 });
-
-let noteCount = 0;
-let filter = "all";
-noteFormElement.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const noteTitleElement = e.target.querySelector(".noteTitle");
-  if (!noteTitleElement.value.trim()) {
-    return alert("Note title must be filled!");
-  }
-  const newNote = {
-    title: noteTitleElement.value,
-  };
-  createNoteElement(newNote);
-  noteTitleElement.value = "";
-  noteCount++;
-  updateItemsLeft();
-  applyFilter();
-});
